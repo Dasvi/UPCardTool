@@ -83,8 +83,8 @@ namespace UPCardTool
                     maxLevel = 1,
                     useCount = 1,
                     isNew = true,
-                    kaikaDate = "",
-                    choKaikaDate = "",
+                    kaikaDate = "0000-00-00 00:00:00.0",
+                    choKaikaDate = "0000-00-00 00:00:00.0",
                     isAcquired = true,
                     created = "",
                     cardId = cardData.GetID()
@@ -111,15 +111,15 @@ namespace UPCardTool
 
             foreach (var card in _cards)
             {
-                if (card.created == "")
+                if (card.created == "0000-00-00 00:00:00.0")
                 {
                     card.created = NetPacketUtil.toString(NetPacketUtil.LocalNow);
                 }
-                if (card.kaikaDate == "" && card.printCount > 0)
+                if (card.kaikaDate == "0000-00-00 00:00:00.0" && card.printCount > 0)
                 {
                     card.kaikaDate = NetPacketUtil.toString(NetPacketUtil.LocalNow);
                 }
-                if (card.choKaikaDate == "" && card.printCount > 2 && card.level == card.maxLevel)
+                if (card.choKaikaDate == "0000-00-00 00:00:00.0" && card.printCount > 2 && card.level == card.maxLevel)
                 {
                     card.choKaikaDate = NetPacketUtil.toString(NetPacketUtil.LocalNow);
                 }
