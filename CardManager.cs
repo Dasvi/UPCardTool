@@ -86,7 +86,7 @@ namespace UPCardTool
                     kaikaDate = "0000-00-00 00:00:00.0",
                     choKaikaDate = "0000-00-00 00:00:00.0",
                     isAcquired = true,
-                    created = "",
+                    created = "0000-00-00 00:00:00.0",
                     cardId = cardData.GetID()
                 };
                 _cards.Add(card);
